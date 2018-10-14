@@ -9,7 +9,11 @@ describe ExecuteService, type: :service do
   end
 
   describe '#exec_ruby_code' do
-    it 'should be called' do
+    it 'should be called with one option' do
+      expect { execute_service.exec_ruby_code('script.rb') }.not_to raise_error
+    end
+
+    it 'should be called with full options' do
       expect { execute_service.exec_ruby_code('script.rb', '-U3') }.not_to raise_error
     end
   end
