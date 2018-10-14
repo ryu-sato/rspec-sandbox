@@ -42,6 +42,9 @@ group :development, :test do
 
   # use RSpec
   gem 'rspec-rails', '~> 3.6'
+
+  # use binding.pry
+  gem 'pry', '~> 0.11.3'
 end
 
 group :development do
