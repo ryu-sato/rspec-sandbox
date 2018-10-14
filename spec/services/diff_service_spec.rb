@@ -4,11 +4,6 @@ require 'rails_helper'
 describe DiffService, type: :service do
   let(:diff_service) { DiffService.instance }
 
-  # before do
-  #   # LogdiffService内のmethodのモックを定義する
-  #   allow(diff_service).to receive(:process_to_remove_float_value).and_return(:process_to_remove_float_value)
-  # end
-
   describe '#different?' do
     let(:files) { [
       { name: 'same0', content: 'abc' },
