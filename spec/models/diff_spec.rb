@@ -12,5 +12,8 @@
 require 'rails_helper'
 
 RSpec.describe Diff, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "is valid with diff string" do
+    diff = Diff.new(diff: "some diff")
+    expect(diff.valid?).to be_truthy
+  end
 end
