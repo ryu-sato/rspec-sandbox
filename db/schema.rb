@@ -10,13 +10,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_07_172640) do
+ActiveRecord::Schema.define(version: 2018_11_07_174158) do
 
   create_table "diffs", force: :cascade do |t|
     t.string "diff", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "lock_version"
+  end
+
+  create_table "notes", force: :cascade do |t|
+    t.integer "project_id"
+    t.integer "user_id"
+    t.text "message"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "lock_version"
+    t.index ["project_id"], name: "index_notes_on_project_id"
+    t.index ["user_id"], name: "index_notes_on_user_id"
   end
 
   create_table "projects", force: :cascade do |t|
