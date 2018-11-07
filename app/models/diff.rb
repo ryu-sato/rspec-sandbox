@@ -10,4 +10,5 @@
 #
 
 class Diff < ApplicationRecord
+  validates :diff, presence: true
 end
