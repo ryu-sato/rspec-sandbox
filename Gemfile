@@ -56,7 +56,7 @@ group :development, :test do
 
   # use RSpec
   # RSpec for Rails (https://github.com/rspec/rspec-rails)
-  gem 'rspec-rails', '~> 3.6'
+  gem 'rspec-rails', '~> 3.8'
 
   # use binding.pry
   # An IRB alternative and runtime developer console (http://pryrepl.org)
